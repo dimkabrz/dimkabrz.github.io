@@ -14,7 +14,7 @@
 1. Склонируйте репозиторий на свою локальную машину:
 
    ```
-   git clone https://github.com/dimkabrz/adept_test.git
+   git clone https://github.com/dimkabrz/dimkabrz.github.io.git
    ```
 
 2. Перейдите в директорию проекта:
@@ -50,7 +50,7 @@ npm run dev
 Если API возвращает ошибку, следует вывести идентификатор ошибки в консоль, если он есть и повторить запрос.
 
 Пароль для доступа к апи: Valantis
-API доступно по адресу: http://api.valantis.store:40000/
+API доступно по адресу: https://api.valantis.store:41000/
 
 
 Форма подачи:
