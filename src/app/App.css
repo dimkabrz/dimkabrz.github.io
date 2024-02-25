@@ -1,0 +1,38 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+table{
+  border: 1px solid #eee;
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse
+}
+table th {
+  font-weight: bold;
+  padding: 5px;
+  background: #efefef;
+  border: 1px solid #dddddd;
+}
+table td{
+  padding: 5px 10px;
+  border: 1px solid #eee;
+  text-align: left;
+}
+td div{
+  display: flex;
+  justify-content: center;
+  height: 35px;
+  align-items: center;
+  text-align: center;
+}
+tr:nth-child(odd){
+  background: #fff;
+}
+tr:nth-child(even){
+  background: #F7F7F7;
+}

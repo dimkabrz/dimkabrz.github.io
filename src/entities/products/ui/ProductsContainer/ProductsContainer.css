@@ -1,0 +1,19 @@
+.paginate_panel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.products_container{
+    position: relative;
+}
+.shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 3;
+    opacity: 0.3;
+}
+.disable_paginate{
+    visibility: hidden;
+}
