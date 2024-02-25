@@ -15,7 +15,8 @@ export const createAuthHash = (date: Date) => {
         const currentYear = date.getUTCFullYear();
         const actualMonth = date.getUTCMonth() + 1;
         const currentMonth = actualMonth > 9 ? `${actualMonth}` : `0${actualMonth}`;
-        const currentDay = date.getUTCDate();
+        const actualDay = date.getUTCDate();
+        const currentDay = actualDay > 9 ? actualDay : `0${actualDay}`;
         return `${currentYear}${currentMonth}${currentDay}`;
     }
     const timeStamp = getCurrentDate(date);
