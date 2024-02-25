@@ -117,9 +117,9 @@ export const useGetProducts = () => {
     }
     const reloadData = async () => {
         setLoading(true)
-        getData(offsetLength).then(data => {
+        getData(0).then(data => {
             setProducts(data);
-            setOffsetLength(products.length);
+            setOffsetLength(0);
             setLoading(false)
         })
     }
