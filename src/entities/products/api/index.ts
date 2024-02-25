@@ -25,7 +25,7 @@ export const createAuthHash = (date: Date) => {
 export const getIds = async (offset: number) => {
     const date = new Date();
     const authHash = createAuthHash(date);
-    const response = await axios.post('http://api.valantis.store:40000', {
+    const response = await axios.post('https://api.valantis.store:41000', {
             "action": "get_ids",
             "params": {"offset": offset, "limit": 50}
         }, {
@@ -37,7 +37,7 @@ export const getIds = async (offset: number) => {
     const data = response.data.result;
     const set = new Set(response.data.result);
     if (data.length > set.size) {
-        const response = await axios.post('http://api.valantis.store:40000', {
+        const response = await axios.post('https://api.valantis.store:41000', {
                 "action": "get_ids",
                 "params": {"offset": 50, "limit": data.length - set.size}
             }, {
@@ -54,7 +54,7 @@ export const getIds = async (offset: number) => {
 export const getProductsById = async (idsList: ID[]) => {
     const date = new Date();
     const authHash = createAuthHash(date);
-    const response = await axios.post('http://api.valantis.store:40000', {
+    const response = await axios.post('https://api.valantis.store:41000', {
             "action": "get_items",
             "params": {"ids": idsList}
         }, {
@@ -68,7 +68,7 @@ export const getProductsById = async (idsList: ID[]) => {
 export const getFilteredIds = async (params: Params) => {
     const date = new Date();
     const authHash = createAuthHash(date);
-    const response = await axios.post('http://api.valantis.store:40000', {
+    const response = await axios.post('https://api.valantis.store:41000', {
             "action": "filter",
             "params": params
         }, {
@@ -83,7 +83,7 @@ export const getFilteredIds = async (params: Params) => {
 export const getFields = async (params: FieldsParams) => {
     const date = new Date();
     const authHash = createAuthHash(date);
-    const response = await axios.post('http://api.valantis.store:40000', {
+    const response = await axios.post('https://api.valantis.store:41000', {
             "action": "get_fields",
             "params": params
         }, {

@@ -28,11 +28,11 @@ export const ProductsContainer = () => {
                     <Button
                         disabled={context.offsetLength === 0}
                         onClick={context.requestPrevPage}
-                    >{'<='}
+                    >←
                     </Button>
                     <Button
                         onClick={context.requestNextPage}
-                    >{'=>'}
+                    >→
                     </Button>
                 </div>
                 <Button onClick={reloadFilter}>Сбросить фильтры</Button>

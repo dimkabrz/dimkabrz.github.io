@@ -103,12 +103,12 @@ export const useGetProducts = () => {
     }
     const requestNextPage = async () => {
         setLoading(true);
-        const response = await getData(offsetLength);
+        const response = await getData(offsetLength + 50);
         setProducts(response);
         setOffsetLength(offsetLength + response.length);
         setLoading(false)
     }
-    const filterData = async (params:Params) => {
+    const filterData = async (params: Params) => {
         setLoading(true);
         const response = await updateFilterData(params);
         setProducts(response);

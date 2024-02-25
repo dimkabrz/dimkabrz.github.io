@@ -94,7 +94,7 @@ export const ProductsTable = ({params, setParams}: Props) => {
             </thead>
             <tbody>
             {context.products.map(product => <ProductRow key={product.id} product={product}/>)}
-            {context.products.length === 0 && 'Нет данных о запрашиваемых продуктах'}
+            {context.products.length === 0 && <tr><td colSpan={4}><div>Нет данных о запрашиваемых продуктах</div></td></tr>}
             </tbody>
         </table>
     );
