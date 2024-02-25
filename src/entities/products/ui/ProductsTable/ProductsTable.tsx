@@ -74,18 +74,18 @@ export const ProductsTable = ({params, setParams}: Props) => {
                     <input
                         value={params.product ?? ''}
                         placeholder={'Название'}
-                        className="filter_select"
+                        className="filter_input"
                         onChange={(e) => debounce(e.target.value)}
                     />
                 </th>
                 <th>
-                    <select value={params.price ?? ''} onChange={(e) => setFilteredPrice(+e.target.value)}>
+                    <select className="filter_select" value={params.price ?? ''} onChange={(e) => setFilteredPrice(+e.target.value)}>
                         <option value=''>Цена</option>
                         {prices.map(price => <option key={price} value={price}>{price}</option>)}
                     </select>
                 </th>
                 <th>
-                    <select value={params.brand ?? ''} onChange={(e) => setFilteredBrand(e.target.value)}>
+                    <select className="filter_select" value={params.brand ?? ''} onChange={(e) => setFilteredBrand(e.target.value)}>
                         <option value=''>Бренд</option>
                         {brands.map(brand => <option key={brand} value={brand}>{brand}</option>)}
                     </select>

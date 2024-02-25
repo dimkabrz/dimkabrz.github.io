@@ -12,10 +12,10 @@ type FieldsParams = {
 export const createAuthHash = (date: Date) => {
     const password = 'Valantis';
     const getCurrentDate = (date: Date) => {
-        const currentYear = date.getFullYear();
-        const actualMonth = date.getMonth() + 1;
+        const currentYear = date.getUTCFullYear();
+        const actualMonth = date.getUTCMonth() + 1;
         const currentMonth = actualMonth > 9 ? `${actualMonth}` : `0${actualMonth}`;
-        const currentDay = date.getDate();
+        const currentDay = date.getUTCDate();
         return `${currentYear}${currentMonth}${currentDay}`;
     }
     const timeStamp = getCurrentDate(date);
